@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReviewPing - New-review alerts for local businesses</title>
+<meta name="description" content="ReviewPing watches your public review pages and texts you the moment a new review posts. $15/month.">
+<style>
+:root{--teal:#0f766e;--teal-dark:#115e59;--ink:#1f2a2e;--soft:#f0f7f5;--line:#d4e4e0;--amber:#d97706}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Verdana,Geneva,sans-serif;background:#fff;color:var(--ink);line-height:1.65}
+.wrap{max-width:860px;margin:0 auto;padding:0 1.25rem}
+nav{border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem}
+.logo{font-size:1.35rem;font-weight:700;color:var(--teal)}
+.logo em{font-style:normal;color:var(--amber)}
+nav .sub{font-size:.8rem;color:#5c7370}
+.hero{background:var(--soft);border-bottom:1px solid var(--line);padding:3.2rem 0}
+h1{font-size:2.1rem;line-height:1.25;color:var(--teal-dark);max-width:24ch}
+.hero p{margin-top:1rem;max-width:56ch;font-size:1.05rem;color:#3d5450}
+h2{font-size:1.05rem;text-transform:uppercase;letter-spacing:.12em;color:var(--teal);margin:2.6rem 0 1rem}
+.rows{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.row{border:1px solid var(--line);border-radius:10px;padding:1.1rem;background:#fff}
+.row b{color:var(--teal-dark);display:block;margin-bottom:.3rem}
+.sample{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.sample .head{background:var(--teal-dark);color:#fff;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:.5rem 1rem}
+.msg{padding:1rem;border-bottom:1px solid var(--line);font-size:.93rem}
+.msg:last-child{border-bottom:0}
+.msg .meta{font-size:.78rem;color:#6b8580;margin-bottom:.25rem}
+.msg .stars{color:var(--amber);letter-spacing:.1em}
+.cta{background:var(--teal-dark);color:#fff;margin-top:3rem;padding:2.4rem 0;text-align:center}
+.cta .price{font-size:2.4rem;font-weight:700}
+.cta .per{color:#a7d3cd}
+button.buy{margin-top:1.2rem;background:var(--amber);color:#fff;border:0;border-radius:8px;font-size:1.05rem;font-weight:700;padding:.9rem 2.4rem;cursor:pointer}
+button.buy:hover{background:#b45309}
+.cta .fine{margin-top:.9rem;font-size:.83rem;color:#a7d3cd}
+section.pad{padding-bottom:1rem}
+.modal{display:none;position:fixed;inset:0;background:rgba(15,42,40,.6);align-items:center;justify-content:center;padding:1rem}
+.modal.open{display:flex}
+.card{background:#fff;border-radius:12px;max-width:460px;padding:2rem}
+.card h3{color:var(--teal-dark);margin-bottom:.7rem}
+.card p{margin-bottom:.9rem;font-size:.95rem}
+.card a.mail{display:inline-block;background:var(--teal);color:#fff;text-decoration:none;border-radius:8px;padding:.7rem 1.4rem;font-weight:700}
+.card .dismiss{display:block;margin-top:1rem;font-size:.85rem;color:#6b8580;cursor:pointer;text-decoration:underline;background:none;border:0}
+footer{padding:2rem 0 3rem;font-size:.82rem;color:#6b8580}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><div class="logo">Review<em>Ping</em></div><div class="sub">Review alerts for local business</div></div></nav>
+
+<section class="hero"><div class="wrap">
+<h1>A bad review sits unanswered for 9 days. On average, that's what it costs you.</h1>
+<p>Most owners find out about a new review when a customer mentions it - or when the rating has already moved. ReviewPing watches your public review pages and pings you within the hour a new review posts, so you can thank the happy ones and answer the unhappy ones while it still matters.</p>
+</div></section>
+
+<div class="wrap">
+<h2>How it works</h2>
+<div class="rows">
+<div class="row"><b>1. Point us at your pages</b>Your Google profile, Yelp page, Facebook page - wherever your customers actually review you.</div>
+<div class="row"><b>2. We check them every hour</b>A real check of the public page, on a schedule, every day. No API keys, nothing to install, nothing for you to maintain.</div>
+<div class="row"><b>3. You get the ping</b>The star rating, the reviewer's first name, the text, and a link to answer it - the moment it appears.</div>
+</div>
+
+<h2>What a ping looks like <span style="font-size:.68rem;color:#6b8580;letter-spacing:.1em">(ILLUSTRATIVE SAMPLE)</span></h2>
+<div class="sample">
+<div class="head">Sample pings - format preview, not real reviews</div>
+<div class="msg"><div class="meta">Google - Sample Street Bakery - 12 min ago</div><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br>"The sourdough is worth the early line. Staff remembered my order from last week."</div>
+<div class="msg"><div class="meta">Yelp - Sample Dental Group - 1 hr ago</div><span class="stars">&#9733;&#9733;</span><br>"Waited 40 minutes past my appointment time. Front desk seemed overwhelmed."</div>
+</div>
+
+<section class="pad">
+<h2>Who this is for</h2>
+<p style="max-width:60ch">Owner-run shops, clinics, restaurants, and contractors who live on their rating but don't have time to refresh four review sites a day. One new review answered fast is worth more than a month of ads.</p>
+</section>
+</div>
+
+<section class="cta"><div class="wrap">
+<div class="price">$15<span class="per">/month</span></div>
+<div>Hourly checks of your public review pages. Ping within the hour. Cancel anytime.</div>
+<button class="buy" id="buyBtn">Start getting pinged - $15/mo</button>
+<div class="fine">We only read your public pages - the same thing any customer sees. No account access needed.</div>
+</div></section>
+
+<div class="wrap"><footer>ReviewPing is an alerting service. Reviews belong to their platforms and authors; we point you to them, we don't change them. ReviewPing is a Plainfield Press project.</footer></div>
+
+<div class="modal" id="modal"><div class="card">
+<h3>We're not taking payment yet</h3>
+<p>ReviewPing is in its final pre-launch check. Purchases open soon - join the early-access list and you'll get a code for your first month when we open.</p>
+<p>Nothing is charged on this page.</p>
+<a class="mail" id="waitLink" href="mailto:mfcyxd@mail.instinct.com?subject=ReviewPing%20early%20access">Join the early-access list</a>
+<button class="dismiss" id="dismiss">Back to the page</button>
+</div></div>
+
+<script data-goatcounter="https://reviewping.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+var m=document.getElementById('modal');
+document.getElementById('buyBtn').addEventListener('click',function(){
+  if(window.goatcounter&&window.goatcounter.count){window.goatcounter.count({path:'buy-intent',title:'Buy intent',event:true});}
+  m.classList.add('open');
+});
+document.getElementById('waitLink').addEventListener('click',function(){
+  if(window.goatcounter&&window.goatcounter.count){window.goatcounter.count({path:'waitlist-click',title:'Waitlist click',event:true});}
+});
+document.getElementById('dismiss').addEventListener('click',function(){m.classList.remove('open');});
+</script>
+</body>
+                                                                                     </html>
